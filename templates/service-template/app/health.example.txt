@@ -1,0 +1,16 @@
+Example health endpoint requirement:
+
+GET /health
+
+Expected response:
+
+HTTP 200 OK
+
+{
+"status": "healthy",
+"service": "example-service"
+}
+
+Every service onboarded to the platform should expose a health endpoint so that CI/CD, Kubernetes, ECS, load balancers and monitoring tools can validate service availability.
+
+Health checks help the platform confirm whether the service is running, reachable and safe to receive traffic.
